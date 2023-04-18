@@ -1,0 +1,64 @@
+2023-04-15 18:17:03,367 style-transfer INFO: Namespace(config_file='')
+2023-04-15 18:17:03,368 style-transfer INFO: Running with config:
+DATA:
+  IMAGENET_MEAN: [0.40760392, 0.45795686, 0.48501961]
+  IMG_SIZE: 512
+HRDATA:
+  IMG_SIZE: 800
+HRLOSS:
+  MAX_ITER: 200
+LOSS:
+  CONTENT_LAYERS: ['relu4_2']
+  CONTENT_WEIGHTS: [1.0]
+  LOG_ITER_SHOW: 0.1
+  MAX_ITER: 500
+  STYLE_LAYERS: ['relu1_1', 'relu2_1', 'relu3_1', 'relu4_1', 'relu5_1']
+  STYLE_WEIGHTS: [0.244140625, 0.06103515625, 0.0152587890625, 0.003814697265625, 0.003814697265625]
+MODEL:
+  DEVICE: cuda
+  META_ARCHITECTURE: VGG
+  MODELS_DIR: ./model/trainedModel
+  VGG:
+    CONV_LAYERS_DICT: [{'conv1_1': {'in_channels': 3, 'out_channels': 64, 'kernel': 3, 'padding': 1}, 'conv1_2': {'in_channels': 64, 'out_channels': 64, 'kernel': 3, 'padding': 1}, 'conv2_1': {'in_channels': 64, 'out_channels': 128, 'kernel': 3, 'padding': 1}, 'conv2_2': {'in_channels': 128, 'out_channels': 128, 'kernel': 3, 'padding': 1}, 'conv3_1': {'in_channels': 128, 'out_channels': 256, 'kernel': 3, 'padding': 1}, 'conv3_2': {'in_channels': 256, 'out_channels': 256, 'kernel': 3, 'padding': 1}, 'conv3_3': {'in_channels': 256, 'out_channels': 256, 'kernel': 3, 'padding': 1}, 'conv3_4': {'in_channels': 256, 'out_channels': 256, 'kernel': 3, 'padding': 1}, 'conv4_1': {'in_channels': 256, 'out_channels': 512, 'kernel': 3, 'padding': 1}, 'conv4_2': {'in_channels': 512, 'out_channels': 512, 'kernel': 3, 'padding': 1}, 'conv4_3': {'in_channels': 512, 'out_channels': 512, 'kernel': 3, 'padding': 1}, 'conv4_4': {'in_channels': 512, 'out_channels': 512, 'kernel': 3, 'padding': 1}, 'conv5_1': {'in_channels': 512, 'out_channels': 512, 'kernel': 3, 'padding': 1}, 'conv5_2': {'in_channels': 512, 'out_channels': 512, 'kernel': 3, 'padding': 1}, 'conv5_3': {'in_channels': 512, 'out_channels': 512, 'kernel': 3, 'padding': 1}, 'conv5_4': {'in_channels': 512, 'out_channels': 512, 'kernel': 3, 'padding': 1}}]
+    FORWARD_SEQ: ['conv1_1', 'conv1_2', 'pool_1', 'conv2_1', 'conv2_2', 'pool_2', 'conv3_1', 'conv3_2', 'conv3_3', 'conv3_4', 'pool_3', 'conv4_1', 'conv4_2', 'conv4_3', 'conv4_4', 'pool_4', 'conv5_1', 'conv5_2', 'conv5_3', 'conv5_4', 'pool_5']
+    OUT_SEQ: ['relu1_1', 'relu1_2', 'pool_1', 'relu2_1', 'relu2_2', 'pool_2', 'relu3_1', 'relu3_2', 'relu3_3', 'relu3_4', 'pool_3', 'relu4_1', 'relu4_2', 'relu4_3', 'relu4_4', 'pool_4', 'relu5_1', 'relu5_2', 'relu5_3', 'relu5_4', 'pool_5']
+    POOL_LAYERS_DICT: [{'pool_1': {'kernel_size': 2, 'stride': 2}, 'pool_2': {'kernel_size': 2, 'stride': 2}, 'pool_3': {'kernel_size': 2, 'stride': 2}, 'pool_4': {'kernel_size': 2, 'stride': 2}, 'pool_5': {'kernel_size': 2, 'stride': 2}}]
+  WEIGHTS: ./model/trainedModel/vgg_conv.pth
+OUTPUT:
+  DIR: ./output/
+  FILE_NAME: output.jpg
+  HR_FILE_NAME: hr_output.jpg
+2023-04-15 18:19:27,426 style-transfer INFO: Namespace(config_file='')
+2023-04-15 18:19:27,427 style-transfer INFO: Running with config:
+DATA:
+  IMAGENET_MEAN: [0.40760392, 0.45795686, 0.48501961]
+  IMG_SIZE: 512
+HRDATA:
+  IMG_SIZE: 800
+HRLOSS:
+  MAX_ITER: 200
+LOSS:
+  CONTENT_LAYERS: ['relu4_2']
+  CONTENT_WEIGHTS: [1.0]
+  LOG_ITER_SHOW: 0.1
+  MAX_ITER: 500
+  STYLE_LAYERS: ['relu1_1', 'relu2_1', 'relu3_1', 'relu4_1', 'relu5_1']
+  STYLE_WEIGHTS: [0.244140625, 0.06103515625, 0.0152587890625, 0.003814697265625, 0.003814697265625]
+MODEL:
+  DEVICE: cuda
+  META_ARCHITECTURE: VGG
+  MODELS_DIR: ./model/trainedModel
+  VGG:
+    CONV_LAYERS_DICT: [{'conv1_1': {'in_channels': 3, 'out_channels': 64, 'kernel': 3, 'padding': 1}, 'conv1_2': {'in_channels': 64, 'out_channels': 64, 'kernel': 3, 'padding': 1}, 'conv2_1': {'in_channels': 64, 'out_channels': 128, 'kernel': 3, 'padding': 1}, 'conv2_2': {'in_channels': 128, 'out_channels': 128, 'kernel': 3, 'padding': 1}, 'conv3_1': {'in_channels': 128, 'out_channels': 256, 'kernel': 3, 'padding': 1}, 'conv3_2': {'in_channels': 256, 'out_channels': 256, 'kernel': 3, 'padding': 1}, 'conv3_3': {'in_channels': 256, 'out_channels': 256, 'kernel': 3, 'padding': 1}, 'conv3_4': {'in_channels': 256, 'out_channels': 256, 'kernel': 3, 'padding': 1}, 'conv4_1': {'in_channels': 256, 'out_channels': 512, 'kernel': 3, 'padding': 1}, 'conv4_2': {'in_channels': 512, 'out_channels': 512, 'kernel': 3, 'padding': 1}, 'conv4_3': {'in_channels': 512, 'out_channels': 512, 'kernel': 3, 'padding': 1}, 'conv4_4': {'in_channels': 512, 'out_channels': 512, 'kernel': 3, 'padding': 1}, 'conv5_1': {'in_channels': 512, 'out_channels': 512, 'kernel': 3, 'padding': 1}, 'conv5_2': {'in_channels': 512, 'out_channels': 512, 'kernel': 3, 'padding': 1}, 'conv5_3': {'in_channels': 512, 'out_channels': 512, 'kernel': 3, 'padding': 1}, 'conv5_4': {'in_channels': 512, 'out_channels': 512, 'kernel': 3, 'padding': 1}}]
+    FORWARD_SEQ: ['conv1_1', 'conv1_2', 'pool_1', 'conv2_1', 'conv2_2', 'pool_2', 'conv3_1', 'conv3_2', 'conv3_3', 'conv3_4', 'pool_3', 'conv4_1', 'conv4_2', 'conv4_3', 'conv4_4', 'pool_4', 'conv5_1', 'conv5_2', 'conv5_3', 'conv5_4', 'pool_5']
+    OUT_SEQ: ['relu1_1', 'relu1_2', 'pool_1', 'relu2_1', 'relu2_2', 'pool_2', 'relu3_1', 'relu3_2', 'relu3_3', 'relu3_4', 'pool_3', 'relu4_1', 'relu4_2', 'relu4_3', 'relu4_4', 'pool_4', 'relu5_1', 'relu5_2', 'relu5_3', 'relu5_4', 'pool_5']
+    POOL_LAYERS_DICT: [{'pool_1': {'kernel_size': 2, 'stride': 2}, 'pool_2': {'kernel_size': 2, 'stride': 2}, 'pool_3': {'kernel_size': 2, 'stride': 2}, 'pool_4': {'kernel_size': 2, 'stride': 2}, 'pool_5': {'kernel_size': 2, 'stride': 2}}]
+  WEIGHTS: ./model/trainedModel/vgg_conv.pth
+OUTPUT:
+  DIR: ./output/
+  FILE_NAME: output.jpg
+  HR_FILE_NAME: hr_output.jpg
+2023-04-15 18:25:32,515 style-transfer INFO: Start transferring.
+2023-04-15 18:25:49,019 style-transfer INFO: Start transferring.
+2023-04-15 18:26:24,711 style-transfer INFO: Start transferring.
+2023-04-15 18:28:09,483 style-transfer INFO: Iteration: 50, loss: 1180243.000000
